@@ -1,0 +1,43 @@
+{% extends 'polls/base.html' %}
+
+{% block content %}
+<h1>Новый опрос</h1>
+
+<form method="POST" class="post-form">
+    {% csrf_token %} <!-- Обязательный тег для защиты от CSRF -->
+
+    <!-- Отображение ошибок формы, не связанных с полями -->
+    {% if form.non_field_errors %}
+        <div class="alert alert-danger">
+            {{ form.non_field_errors }}
+        </div>
+    {% endif %}
+
+    <!-- Поле для текста вопроса -->
+    <div class="form-group">
+        <label for="{{ form.question_text.id_for_label }}">{{ form.question_text.label }}</label>
+        {{ form.question_text }}
+        {% if form.question_text.errors %}
+            <div class="text-danger">
+                {{ form.question_text.errors }}
+            </div>
+        {% endif %}
+    </div>
+
+    <!-- Поле для вариантов ответов -->
+    <div class="form-group">
+        <label for="{{ form.choices_text.id_for_label }}">{{ form.choices_text.label }}</label>
+        <small class="form-text text-muted">{{ form.choices_text.help_text }}</small>
+        {{ form.choices_text }}
+        {% if form.choices_text.errors %}
+            <div class="text-danger">
+                {{ form.choices_text.errors }}
+            </div>
+        {% endif %}
+    </div>
+
+    <button type="submit" class="btn btn-primary">Сохранить опрос</button>
+    <a href="{% url 'polls:index' %}" class="btn btn-secondary">Отмена</a>
+</form>
+
+{% endblock %}

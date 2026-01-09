@@ -1,0 +1,13 @@
+.search-highlight {
+    background-color: #fff3cd;
+    border-radius: 3px;
+    padding: 0 2px;
+}
+
+.chart-container {
+    border: 1px solid #dee2e6;
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 20px;
+    background: white;
+}

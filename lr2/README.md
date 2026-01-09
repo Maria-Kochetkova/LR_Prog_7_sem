@@ -1,10 +1,10 @@
 # Лабораторная работа №2
 ## Часть 1: Разработка микросервисов (Flask + Multiprocessing)  
-Создание app.py
+Создание [app.py](./app.py)
 ## Часть 2: Упаковка в Docker-контейнер  
 Добавление фалов:
-1. Создание requirements.txt
-2. Создание Dockerfile
+1. Создание [requirements.txt](./requirements.txt)
+2. Создание [Dockerfile](./Dockerfile)
 
 Сборка и проверка:
 

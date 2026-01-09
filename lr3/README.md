@@ -9,7 +9,6 @@ python manage.py startapp
 ```
 
 База данных инициализирована, создан суперпользователь для доступа к админке:
-
 ```
 python manage.py migrate
 python manage.py createsuperuser
@@ -18,12 +17,10 @@ python manage.py createsuperuser
 ## 2. Работа с моделями и БД
 
 Описаны модели Question и Choice. Сгенерированы и применены миграции:
-
 ```
 python manage.py makemigrations polls
 python manage.py migrate
 ```
-
 
 ## 3. Интерфейс и логика (Views & Templates)
 
